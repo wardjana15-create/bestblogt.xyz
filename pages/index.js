@@ -1,17 +1,18 @@
 import Link from 'next/link'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
+import LayoutWrapper from '@/components/LayoutWrapper' // <-- IMPORT THE LAYOUT
 
-// This function is for server-side logic, we will build it later.
-// For now, it's just a placeholder.
+// We'll build this properly later. It's still a placeholder.
 export async function getStaticProps() {
-  const posts = [] // We'll fetch posts here in a future step
+  const posts = [] 
   return { props: { posts } }
 }
 
 export default function Home({ posts }) {
   return (
-    <>
+    // WRAP EVERYTHING IN THE LAYOUTWRAPPER
+    <LayoutWrapper>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
@@ -23,15 +24,11 @@ export default function Home({ posts }) {
           </p>
         </div>
         
-        {/* This is where the list of blog posts will go. */}
-        {/* For now, it will be empty. */}
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
-          {/* We will map over 'posts' here later to display them */}
         </ul>
       </div>
 
-      {/* We can add a "Read all posts" link at the bottom later */}
       {posts.length > 5 && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
@@ -43,6 +40,6 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-    </>
+    </LayoutWrapper>
   )
 }
