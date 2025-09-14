@@ -3,7 +3,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'AI Flow Kit | Supercharge Your Productivity', // REPLACE WITH YOUR TITLE
-  author: 'Your Name', // REPLACE WITH YOUR NAME
+  author: 'Alex Reed', // REPLACE WITH YOUR NAME
   headerTitle: 'AI Flow Kit', // This can be your site name
   description:
     'In-depth reviews, workflows, and guides for the best AI-powered personal productivity tools. Master your efficiency as a solopreneur.', // REPLACE WITH YOUR DESCRIPTION
@@ -14,7 +14,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png', // You can change this later
   socialBanner: '/static/images/twitter-card.png', // You can change this later
   mastodon: 'https://mastodon.social/@mastodonuser', // Optional
-  email: 'contact@aiflowkit.xyz', // REPLACE with your email
+  email: 'evereth911@gmail.com', // REPLACE with your email
   github: 'https://github.com/wardjana15', // REPLACE with your GitHub profile
   twitter: 'https://twitter.com/YourTwitterHandle', // Optional
   facebook: 'https://facebook.com', // Optional
