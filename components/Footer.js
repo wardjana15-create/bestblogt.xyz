@@ -1,4 +1,6 @@
-import Link from 'next/link'
+// components/Footer.js
+
+import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 
@@ -7,9 +9,10 @@ export default function Footer() {
     <footer>
       <div className="mt-16 flex flex-col items-center">
         <div className="mb-3 flex space-x-4">
-          <SocialIcon kind="github" href={siteMetadata.github} size="6" />
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />
-          {/* Add other social icons here if you add them to siteMetadata, e.g., twitter, linkedin */}
+          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
+          <SocialIcon kind="github" href={siteMetadata.github} size={6} />
+          <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
+          <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>{siteMetadata.author}</div>
@@ -18,10 +21,11 @@ export default function Footer() {
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          {/* You can add a link to a theme credit here if you like */}
+        <div className="mb-8 flex space-x-4 text-sm text-gray-500 dark:text-gray-400">
+          <Link href="/contact">Contact</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
         </div>
       </div>
     </footer>
   )
-  }
+}
