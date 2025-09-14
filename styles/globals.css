@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  This CSS rule provides a smooth transition effect when colors change.
+  It's most noticeable when switching between light and dark mode,
+  making the experience feel polished and professional.
+*/
+body {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
